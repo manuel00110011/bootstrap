@@ -1,0 +1,20 @@
+[
+  {
+    "titolo": "Titolo 1",
+    "testo": "Testo della prima card",
+    "data": "10 gennaio 2026",
+    "colore": "success", "link": "#"
+  },
+  {
+    "titolo": "Titolo 2",
+    "testo": "Testo della seconda card",
+    "data": "11 gennaio 2026",
+    "colore": "danger", "link": "#"
+  },
+  {
+    "titolo": "Titolo 3",
+    "testo": "Testo della terza card",
+    "data": "12 gennaio 2026",
+    "colore": "warning", "link": "#"
+  }
+]
