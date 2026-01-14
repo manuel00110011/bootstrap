@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Toast Bootstrap – Esempio Completo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+<body class="p-4">
+
+    <h2>Toast Bootstrap</h2>
+    <button id="btnToast" class="btn btn-primary">
+        Mostra Toast
+    </button>
+
+    <!-- CONTENITORE TOAST -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+
+        <div id="liveToast"
+             class="toast text-bg-success"
+             role="alert"
+             aria-live="assertive"
+             aria-atomic="true">
+
+            <div class="toast-header">
+                <strong class="me-auto">Sistema</strong>
+                <small>ora</small>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Chiudi">
+                </button>
+            </div>
+
+            <div class="toast-body">
+                Operazione completata con successo.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        const toastEl = document.getElementById('liveToast');
+        const btn = document.getElementById('btnToast');
+
+        const toast = new bootstrap.Toast(toastEl, {
+            autohide: true,
+            delay: 3000
+        });
+
+        btn.addEventListener('click', () => {
+            toast.show();
+        });
+    </script>
+
+</body>
+</html>
